@@ -663,7 +663,7 @@ PlayerSettings:
     m_ModelFolderPath: 
     m_PortalFolderPath: 
   luminCert:
-    m_CertPath: /Users/renzoalessandro/Desktop/PROYECTO MAGIC LEAP/privatekey/certificado.cert
+    m_CertPath: C:/Program Files/Magic leap/initialdevelopment.cert
     m_SignPackage: 1
   luminIsChannelApp: 0
   luminVersion:
