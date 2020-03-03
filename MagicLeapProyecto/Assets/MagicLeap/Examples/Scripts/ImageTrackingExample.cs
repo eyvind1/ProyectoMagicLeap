@@ -28,8 +28,8 @@ namespace MagicLeap
         public enum ViewMode : int
         {
             All = 0,
-            AxisOnly,
-            TrackingCubeOnly,
+            //AxisOnly,
+            //TrackingCubeOnly,
             DemoOnly,
         }
 

@@ -34,10 +34,10 @@ namespace MagicLeap
         private string _prefix;
         private string _eventString;
 
-        [SerializeField, Tooltip("Game Object showing the axis")]
+        /*[SerializeField, Tooltip("Game Object showing the axis")]
         private GameObject _axis = null;
         [SerializeField, Tooltip("Game Object showing the tracking cube")]
-        private GameObject _trackingCube = null;
+        private GameObject _trackingCube = null;*/
         [SerializeField, Tooltip("Game Object showing the demo")]
         private GameObject _demo = null;
 
@@ -50,7 +50,7 @@ namespace MagicLeap
         /// </summary>
         void Awake()
         {
-            if (null == _axis)
+            /*if (null == _axis)
             {
                 Debug.LogError("Error: ImageTrackingVisualizer._axis is not set, disabling script.");
                 enabled = false;
@@ -61,7 +61,7 @@ namespace MagicLeap
                 Debug.LogError("Error: ImageTrackingVisualizer._trackingCube is not set, disabling script.");
                 enabled = false;
                 return;
-            }
+            }*/
             if (null == _demo)
             {
                 Debug.LogError("Error: ImageTrackingVisualizer._demo is not set, disabling script.");
@@ -127,11 +127,11 @@ namespace MagicLeap
             switch (_lastViewMode)
             {
                 case ImageTrackingExample.ViewMode.All:
-                    _axis.SetActive(_targetFound);
-                    _trackingCube.SetActive(_targetFound);
-                    _demo.SetActive(_targetFound);
+                    //_axis.SetActive(_targetFound);
+                    //_trackingCube.SetActive(_targetFound);
+                    _demo.SetActive(false);
                     break;
-                case ImageTrackingExample.ViewMode.AxisOnly:
+                /*case ImageTrackingExample.ViewMode.AxisOnly:
                     _axis.SetActive(_targetFound);
                     _trackingCube.SetActive(false);
                     _demo.SetActive(false);
@@ -140,10 +140,10 @@ namespace MagicLeap
                     _axis.SetActive(false);
                     _trackingCube.SetActive(_targetFound);
                     _demo.SetActive(false);
-                    break;
+                    break;*/
                 case ImageTrackingExample.ViewMode.DemoOnly:
-                    _axis.SetActive(false);
-                    _trackingCube.SetActive(false);
+                    //_axis.SetActive(false);
+                    //_trackingCube.SetActive(false);
                     _demo.SetActive(_targetFound);
                     break;
             }
